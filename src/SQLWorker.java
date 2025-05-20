@@ -18,7 +18,7 @@ public class SQLWorker implements Closeable {
         setAccessPassword(accessPassword);
     }
 
-    public void connect() throws SQLException {
+    public void connect() {
         try{
             _connection = DriverManager.getConnection(_url, _accessId, _accessPassword);
             _statement = _connection.createStatement();
